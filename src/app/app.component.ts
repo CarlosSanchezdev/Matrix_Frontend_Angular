@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Matrix_Frontend_Angular';
+  
+  public data$: any;
 
-  changeTitle(){
-    this.title = 'change';
+  constructor() {}
+
+  
+
+  receiveMessage($event: any) {
+    this.data$ = $event;
   }
+  
 }
